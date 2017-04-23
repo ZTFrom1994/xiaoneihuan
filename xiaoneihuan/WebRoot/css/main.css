@@ -1,0 +1,135 @@
+.bigimg {
+	height: 496px; !
+	important border: 1px solid red;
+}
+
+.container-margin {
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 100px;
+}
+
+#viewframe {
+	margin-top: 30px;
+	width: 100%;
+	min-height: 700px;
+}
+
+#blank {
+	height: 100%;
+	width: 7%;
+	float: left;
+	display: inline;
+}
+
+#show-list {
+	display: inline;
+}
+
+#paging {
+	margin-top: 30px;
+	padding-right: 160px;
+	float: right;
+}
+
+body img {
+	width: 100%;
+}
+
+#particles {
+	background-image: url(img/top.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+
+.myLabel {
+	background-color: #5CB85C;
+	font-size: 10px;
+	color: white;
+	width: 400px;
+}
+
+#banner {
+	width: 100%;
+	height: 400px;
+	max-height: 500px;
+	position: relative;
+	background: #2f2f6d;
+	overflow: hidden;
+}
+
+.pelm {
+	position: absolute;
+}
+
+#warpbg {
+	top: 0px;
+	left: 0px;
+	width:120%;
+	height:120%;
+}
+
+#star1 {
+	top: 230px;
+	right: 500px;
+	width:auto;
+	height: auto;
+}
+
+#star2 {
+	top: 320px;
+	right: 700px;
+	width:auto;
+	height: auto;
+}
+
+#star3 {
+	top: 100px;
+	right: 600px;
+	width:auto;
+	height: auto;
+}
+
+#star4 {
+	top: 40px;
+	left: 200px;
+	width:auto;
+	height: auto;
+}
+
+#star5 {
+	bottom: 138px;
+	left: 170px;
+	width:auto;
+	height: auto;
+}
+
+#planet {
+	top: -200px;
+	left: -103px;
+	width:auto;
+	height: auto;
+}
+
+#robot {
+	top: 200px;
+	right: 0px;
+	width:auto;
+	height: auto;
+}
+
+#astronaut {
+	top: 30px;
+	left: 40px;
+	width:auto;
+	height: auto;
+}
+
+#asteroid {
+	top: 60px;
+	right: 160px;
+	width:auto;
+	height: auto;
+}

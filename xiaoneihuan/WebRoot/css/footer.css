@@ -1,0 +1,33 @@
+.main-footer {
+	background: #74BE2F none repeat scroll 0% 0%;
+	padding: 35px 0px 0px;
+	color: white;
+	margin-top:150px;
+}
+
+.copyright {
+	background: white ;
+	font-size: 13px;
+	text-align: center;
+	color: #555;
+	padding-top: 14px;
+	padding-bottom: 17px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.widget {
+	margin-bottom: 35px;
+	
+}
+
+.widget .title {
+	margin-top: 0px;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #EBEBEB;
+	margin-bottom: 21px;
+	position: relative;
+}
+
+.friend-links a{
+	color:white;
+}

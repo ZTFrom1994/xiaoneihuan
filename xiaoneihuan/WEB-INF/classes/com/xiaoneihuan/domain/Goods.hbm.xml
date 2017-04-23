@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaoneihuan.domain">
+	<class name="Goods" table="goods" >
+		<!-- 二级缓存策略 -->
+		<cache usage="read-write"/>
+		<!-- 主键增长策略 --> 
+		<id name="goodsId" type="java.lang.Integer" >
+		 <column name="goods_id" />
+		 <generator class="increment"/> <!-- 主键增长策略hilo sequence navtive incrment uuid identity foreign -->
+		</id>
+		<property name="goodsTitle" type="java.lang.String">
+		<column name="goods_title" not-null="true"/> 
+		</property>
+		
+		<property name="fromSchool" type="java.lang.String">
+		<column name="from_school"  />
+		</property>
+		
+		<property name="publishDate" type="java.util.Date">
+		<column name="publish_date" not-null="true" ></column>
+		</property>
+		
+		<property name="mainClass" type="java.lang.String">
+		<column name="main_class" /> 
+		</property>
+		
+		<property name="subClass" type="java.lang.String">
+		<column name="sub_class" /> 
+		</property>
+		
+		<property name="introduction" type="java.lang.String">
+		<column name="introduction" /> 
+		</property>
+		
+		<property name="dealStatus" type="java.lang.String">
+		<column name="deal_status" check="dealstatus in('寻求交易','已交易','关闭交易')"  not-null="true"/> 
+		</property> 
+		
+		<property name="endDate" type="java.util.Date">
+		<column name="end_date" />  
+		</property>
+		
+		<property name="clicks" type="java.lang.Integer">
+			<column name="clicks" />   
+		</property>
+		
+		<property name="contactNumber" type="java.lang.String">
+		<column name="contact_number"  />   
+		</property>
+		
+		<property name="qqNumber" type="java.lang.String">
+		<column name="qq_number"  />   
+		</property>
+		
+		<property name="conditions" type="java.lang.String">
+		<column name="conditions"  />   
+		</property>
+		
+		<property name="contactName" type="java.lang.String">
+		<column name="contact_name"  />   
+		</property>
+		<property name="city" type="java.lang.String">
+		<column name="city"  />   
+		</property>
+		<property name="publisher" type="java.lang.String">
+			<column name="publisher" />
+		</property>
+		<!-- inverse 为true 让image 维护两者关系 -->
+		<set name="imageSet" inverse="true" order-by="id" lazy="false">
+			<key column="goods_id"></key>
+			<one-to-many class="Image"/>
+		</set>
+	</class>
+</hibernate-mapping>

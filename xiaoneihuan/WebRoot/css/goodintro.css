@@ -1,0 +1,32 @@
+.good-title{
+	height:50px;
+	text-align:left;
+}
+
+.good-deal{
+	height:100px;
+}
+.good-deal a{
+	float:right;
+}
+.good-detail img{
+	float:left;
+}
+.good-detail{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.info{
+	float:left;
+	width:40%;
+	text-align:left;
+	margin-left:20px;	
+	padding-top:20px;
+}
+.info a {
+	float:left;
+}
+.info span{
+	float:left;
+}
+

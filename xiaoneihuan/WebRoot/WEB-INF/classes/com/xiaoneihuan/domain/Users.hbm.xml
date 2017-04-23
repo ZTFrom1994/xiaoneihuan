@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaoneihuan.domain">
+	<class name="User" table="users">
+		<!-- 二级缓存策略 -->
+		<cache usage="read-write"/>
+		<!-- 主键增长策略 --> 
+		<id name="id" type="java.lang.Integer">
+		 <column name="id" />
+		 <generator class="increment"/> <!-- 主键增长策略hilo sequence navtive incrment uuid identity foreign -->
+		</id>  
+		<property name="username" type="java.lang.String" >
+		<column name="username"  not-null="true"  />   
+		</property>
+		<property name="password"  type="java.lang.String">
+		<column name="password"   not-null="true"/> 
+		</property>
+		<property name="registerDate" type="java.util.Date">
+		<column name="register_date" not-null="true" ></column>
+		</property>
+		<property name="sex" type="java.lang.String">
+		<column name="sex" check="sex in ('男','女')"/>
+		</property>
+		<property name="school" type="java.lang.String">
+		<column name="school" />
+		</property>
+		<property name="stuId" type="java.lang.String">
+		<column name="stu_id" />
+		</property>
+		<property name="realName" type="java.lang.String">
+		<column name="real_name"  /> 
+		</property>
+		<property name="isChecked" type="java.lang.String">
+		<column name="is_checked"   not-null="true" /> 
+		</property>
+	</class>
+</hibernate-mapping>

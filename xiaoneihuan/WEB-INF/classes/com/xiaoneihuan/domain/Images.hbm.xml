@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.xiaoneihuan.domain">
+	<class name="Image" table="images">
+		<!-- 二级缓存策略 -->
+		<cache usage="read-write"/>
+		<!-- 主键增长策略 --> 
+		<id name="id" type="java.lang.Integer">
+		 <column name="id" />
+		 <generator class="increment"/> <!-- 主键增长策略hilo sequence navtive incrment uuid identity foreign -->
+		</id>
+		<property name="src" type="java.lang.String">
+		<column name="src" not-null="true" /> 
+		</property>
+		<!-- name 是Image类中对应的goods属性 class就是这个属性的类型 column是到时候image在表里对应的字段 -->
+		<many-to-one name="goods" class="Goods" column="goods_id" lazy="false">
+		</many-to-one>
+	</class>
+</hibernate-mapping>
